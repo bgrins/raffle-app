@@ -21,6 +21,8 @@
 #tweets li img {
   margin: 1px auto;
   display: block;
+  max-width: 48px;
+  max-height: 48px;
 }
 #tweets li p {
   text-align: center;

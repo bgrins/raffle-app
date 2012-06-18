@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title>Twitter Raffle</title>
-<link rel="stylesheet" href="css/style.css"/>
+    <meta charset="utf-8">
+	<title>Twitter Raffle</title>
+	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<div id="app"><div id="raffle"><h1 class="clearfix">Twitter Raffle<span>By <a href='http://comorichweb.posterous.com/'>Como Rich Web</a></span></h1><div id="raffle-inner" class="clearfix"><p>Searching tweets for <input id="search" value="comorichweb" /> <button id="select">Select a Winner</button></p><div id="winner"></div><ul id="tweets" class="clearfix"></ul></div><footer><a href='https://github.com/CoMoRichWebGroup'>Source code</a> 
-</footer></div></div>
+<div id="app">
+	<div id="raffle">
+		<h1 class="clearfix">Twitter Raffle<span>By <a href='http://comorichweb.posterous.com/'>Como Rich Web</a></span></h1>
+		<div id="raffle-inner" class="clearfix">
+			<form id='search-form'>
+			<p>Searching tweets for <input id="search" value="comorichweb" /> 
+				<button id="search" type='submit'>Search</button>
+				<button id="select">Select a Winner</button>
+			</p>
+			</form>
+
+			<div id="winner"></div>
+			<ul id="tweets" class="clearfix"></ul>
+		</div>
+		<footer><a href='https://github.com/CoMoRichWebGroup'>Source code</a></footer>
+	</div>
+</div>
 
 <script id="tweet-template" type="text/template"> <img src="<%= profile_image_url %>"/>
  <p><%= from_user %></p>
 </script>
 
-<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="js/underscore-min.js"></script>
-<script type="text/javascript" src="js/backbone-min.js"></script>
-<script type="text/javascript" src="js/application.js"></script>
+<script type="text/javascript" src="js/mock.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
 </body>
+
 </html>
